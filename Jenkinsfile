@@ -7,7 +7,7 @@ pipeline {
                 pwd
                 unzip FlaskServer.zip
                 docker build --pull -t flaskapp:$BUILD_NUMBER FlaskServer/.
-                docker run -d -p 3000:3000 flaskapp:$BUILD_NUMBER
+                docker run -d -p 3001:3001 flaskapp:$BUILD_NUMBER
                 rm -rf *
                 '''
             }
